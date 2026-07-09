@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="site-body">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dauren Kassen · Senior Android Developer</title>
+  <meta name="description" content="Dauren Kassen — Senior Android Developer. Kotlin, Compose Multiplatform, KMM, CI/CD. Almaty, Kazakhstan." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,430&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Bird gliding across the top -->
+  <div class="sky-bird" aria-hidden="true">
+    <svg class="bird-svg" viewBox="0 0 40 20" width="34" height="17">
+      <path class="bird-path" fill="none" stroke="#4a4a4a" stroke-width="2" stroke-linecap="round"
+            d="M2 11 Q 11 3 20 10 Q 29 3 38 11" />
+    </svg>
+  </div>
+
+  <div class="page-shell">
+
+    <!-- Mode toggle -->
+    <div class="mode-toggle" role="group" aria-label="View mode">
+      <span class="mode-thumb" aria-hidden="true"></span>
+      <button class="mode-btn is-active" data-mode="minimal" type="button" aria-pressed="true">Minimal</button>
+      <button class="mode-btn" data-mode="creative" type="button" aria-pressed="false">Creative</button>
+    </div>
+
+    <div class="homepage">
+
+      <!-- PROFILE -->
+      <article class="article">
+        <header class="page-header">
+          <div style="flex-shrink:0">
+            <div class="profile-avatar" aria-hidden="true">DK</div>
+          </div>
+          <div class="profile-info">
+            <h1 translate="no">Dauren Kassen</h1>
+            <time>Senior Android Developer · Almaty, KZ</time>
+          </div>
+        </header>
+
+        <p>
+          Android Engineer focused on building <em>modular, scalable architectures</em>,
+          implementing Kotlin Multiplatform and Compose Multiplatform, and optimizing
+          CI/CD pipelines. Seven years shipping production Android across banking,
+          agritech and retail — leading teams and cleaning up legacy along the way.
+        </p>
+      </article>
+
+      <!-- ME, ON SOCIAL -->
+      <article class="article">
+        <h2>Me, on social</h2>
+        <div class="post-grid">
+          <a class="post-card post-card--media" href="https://www.linkedin.com/posts/nullptr-party_nullptrtalks2-%D1%82%D0%B5%D0%BF%D0%B5%D1%80%D1%8C-%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE-%D0%BF%D0%B5%D1%80%D0%B5%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B5%D1%82%D1%8C-activity-7464315066771955712-H28d" target="_blank" rel="noopener">
+            <span class="post-card__media"><img src="assets/speaking_cmp.png" alt="Speaking about CMP at nullptr" loading="lazy"></span>
+            <span class="post-card__top">
+              <span class="post-card__badge post-card__badge--li">in</span>
+              <span class="post-card__meta">LinkedIn · nullptr.party</span>
+              <span class="post-card__arrow" aria-hidden="true">↗</span>
+            </span>
+            <span class="post-card__title">Speaker in nullptr</span>
+            <span class="post-card__desc">Talk: CMP — a project that generates income.</span>
+          </a>
+          <a class="post-card post-card--media" href="https://www.instagram.com/p/DZzCkdoDQ9d/" target="_blank" rel="noopener">
+            <span class="post-card__media"><img src="assets/insta_post.png" alt="TechMedia about me" loading="lazy"></span>
+            <span class="post-card__top">
+              <span class="post-card__badge post-card__badge--ig">◎</span>
+              <span class="post-card__meta">Instagram</span>
+              <span class="post-card__arrow" aria-hidden="true">↗</span>
+            </span>
+            <span class="post-card__title">TechMedia about me</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- LAUNCHED BY ME -->
+      <article class="article">
+        <h2>Launched by me</h2>
+        <div class="post-grid">
+          <a class="post-card" href="https://dentra.me/" target="_blank" rel="noopener">
+            <span class="post-card__top">
+              <span class="post-card__badge post-card__badge--proj">↗</span>
+              <span class="post-card__meta">dentra.me</span>
+              <span class="post-card__arrow" aria-hidden="true">↗</span>
+            </span>
+            <span class="post-card__title">Dentra</span>
+            <span class="post-card__desc">Cloud practice-management software for dental &amp; medical clinics.</span>
+          </a>
+          <a class="post-card" href="https://aquacrm.app/ru" target="_blank" rel="noopener">
+            <span class="post-card__top">
+              <span class="post-card__badge post-card__badge--proj">↗</span>
+              <span class="post-card__meta">aquacrm.app</span>
+              <span class="post-card__arrow" aria-hidden="true">↗</span>
+            </span>
+            <span class="post-card__title">AquaCRM</span>
+            <span class="post-card__desc">CRM platform for managing clients, orders and deliveries.</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- EXPERIENCE -->
+      <article class="article">
+        <h2>Experience</h2>
+        <ul class="project-list">
+
+          <li class="project-item">
+            <div class="project-year"><span>2025</span><span class="metric-label">— now</span></div>
+            <div class="project-body">
+              <div class="project-title">
+                <span class="project-title-text">QIC</span>
+                <span class="project-role">Senior Android Developer · Health team</span>
+              </div>
+              <p class="project-description">
+                Building the health vertical of the <em>QIC super-app</em> — online-first health telemetry, on Kotlin &amp; Jetpack Compose.
+              </p>
+            </div>
+          </li>
+
+          <li class="project-item">
+            <div class="project-year"><span>2024</span><span class="metric-label">Apr–Dec</span></div>
+            <div class="project-body">
+              <div class="project-title">
+                <a class="project-title-link" href="https://globerce.capital/" target="_blank" rel="noopener"><span class="project-title-text">Globerce Capital Ltd</span><span class="project-title-arrow" aria-hidden="true">↗</span></a>
+                <span class="project-role">Lead (Teamlead) Android Developer</span>
+              </div>
+              <p class="project-description">
+                Introduced <em>Compose Multiplatform / KMM</em> to share UI &amp; logic across targets and authored the migration roadmap. Built a multi-module Gradle architecture that cut build/CI times, led a 6-person team (code review, PR templates, internal wiki), automated release pipelines, and shipped Kazakhstan's first in-app AI banking assistant — voice ops from <strong>38s → 10–15s</strong>.
+              </p>
+            </div>
+          </li>
+
+          <li class="project-item">
+            <div class="project-year"><span>2020</span><span class="metric-label">– 2024</span></div>
+            <div class="project-body">
+              <div class="project-title">
+                <span class="project-title-text">Digital Automation Solutions KZ</span>
+                <span class="project-role">Lead Android Developer</span>
+              </div>
+              <p class="project-description">
+                Re-architected the flagship app with <em>Clean Architecture + MVI</em> and modularized the codebase. Built an offline transfer solution over Wi-Fi Direct, implemented Bluetooth pairing with agricultural terminals, owned the full <strong>Java → Kotlin</strong> migration, and moved <strong>REST → GraphQL</strong> to accelerate delivery.
+              </p>
+            </div>
+          </li>
+
+          <li class="project-item">
+            <div class="project-year"><span>2022</span><span class="metric-label">– 2023</span></div>
+            <div class="project-body">
+              <div class="project-title">
+                <a class="project-title-link" href="https://eventyr.pro/" target="_blank" rel="noopener"><span class="project-title-text">Eventyr</span><span class="project-title-arrow" aria-hidden="true">↗</span></a>
+                <span class="project-role">Mobile App Developer · remote (AU/US)</span>
+              </div>
+              <p class="project-description">
+                Delivered key screens fully in <em>Jetpack Compose</em>, scaled tagged/branched build scenarios, and set up Jenkins CI for automated QA distribution — <strong>doubling build speed</strong> — with lint moved to local Git hooks.
+              </p>
+            </div>
+          </li>
+
+          <li class="project-item">
+            <div class="project-year"><span>2020</span><span class="metric-label">– 2022</span></div>
+            <div class="project-body">
+              <div class="project-title">
+                <a class="project-title-link" href="https://chocofamily.kz/" target="_blank" rel="noopener"><span class="project-title-text">Chocofamily Holding</span><span class="project-title-arrow" aria-hidden="true">↗</span></a>
+                <span class="project-role">Android Developer</span>
+              </div>
+              <p class="project-description">
+                Maintained and expanded a <strong>100% Kotlin</strong> production app; ran releases with Fastlane, integrated analytics, shipped <em>A/B testing</em>, and led a large modular refactor that unified the data layer (Room) and moved async flow to Coroutines + Flow.
+              </p>
+            </div>
+          </li>
+
+          <li class="project-item">
+            <div class="project-year"><span>2018</span><span class="metric-label">– 2020</span></div>
+            <div class="project-body">
+              <div class="project-title">
+                <span class="project-title-text">Citrobyte</span>
+                <span class="project-role">Junior Android Developer</span>
+              </div>
+              <p class="project-description">
+                Built retail &amp; finance apps, helped drive the <strong>Java → Kotlin</strong> migration and UI/UX improvements, integrated loyalty and payment features, and improved performance of RecyclerView-heavy screens.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+      </article>
+
+      <!-- RECEIPTS -->
+      <article class="article">
+        <h2>Receipts</h2>
+        <ul class="project-list">
+          <li class="project-item">
+            <div class="project-year"><span>38s→10s</span><span class="metric-label">voice ops</span></div>
+            <div class="project-body">
+              <div class="project-title"><span class="project-title-text">First AI assistant in a KZ banking app</span></div>
+              <p class="project-description">A voice-command flow that collapsed a 38-second operation to 10–15 seconds — a country first.</p>
+            </div>
+          </li>
+          <li class="project-item">
+            <div class="project-year"><span>&gt;50%</span><span class="metric-label">faster</span></div>
+            <div class="project-body">
+              <div class="project-title"><span class="project-title-text">QA build time, halved</span></div>
+              <p class="project-description">Jenkins CI pipelines for automated build distribution at Eventyr.</p>
+            </div>
+          </li>
+          <li class="project-item">
+            <div class="project-year"><span>6</span><span class="metric-label">engineers</span></div>
+            <div class="project-body">
+              <div class="project-title"><span class="project-title-text">Android team led as teamlead</span></div>
+              <p class="project-description">Introduced code review, PR templates and an internal wiki at Globerce.</p>
+            </div>
+          </li>
+          <li class="project-item">
+            <div class="project-year"><span>KMM</span><span class="metric-label">shared</span></div>
+            <div class="project-body">
+              <div class="project-title"><span class="project-title-text">UI &amp; logic across platforms</span></div>
+              <p class="project-description">Compose Multiplatform migration roadmap + working prototype.</p>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- TECH STACK -->
+      <article class="article">
+        <h2>Stack</h2>
+        <div class="chip-cloud">
+          <span>Kotlin</span><span>Java</span><span>Jetpack Compose</span><span>Compose Multiplatform</span><span>Kotlin Multiplatform</span><span>MVI</span><span>MVVM</span><span>Clean Architecture</span><span>Multimodule</span><span>Coroutines</span><span>Flow</span><span>Room</span><span>Retrofit</span><span>Ktor</span><span>GraphQL</span><span>Hilt / Koin / Dagger</span><span>Gradle</span><span>Jenkins</span><span>GitLab CI</span><span>Bitrise</span><span>Fastlane</span><span>Espresso</span><span>Mockito</span><span>Kaspresso</span><span>Git</span>
+        </div>
+      </article>
+
+      <!-- EDUCATION -->
+      <article class="article">
+        <h2>Education</h2>
+        <ul class="project-list">
+          <li class="project-item">
+            <div class="project-year"><span>2014</span><span class="metric-label">– 2018</span></div>
+            <div class="project-body">
+              <div class="project-title"><span class="project-title-text">International IT University</span></div>
+              <p class="project-description">BSc in Computer Science &amp; Software Engineering.</p>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <!-- CONTACT -->
+      <section class="article article-section">
+        <h2>Let's talk</h2>
+        <p>Open to senior / lead Android and Compose Multiplatform roles. Based in Almaty, happy remote.</p>
+        <div class="contact-list">
+          <div class="contact-item">
+            <div class="project-year"><span>Email</span></div>
+            <a class="chip-link" href="mailto:kas.dauren@gmail.com"><span class="chip-link__text">kas.dauren@gmail.com</span><span class="chip-link__icon">↗</span></a>
+          </div>
+          <div class="contact-item">
+            <div class="project-year"><span>Telegram</span></div>
+            <a class="chip-link" href="https://t.me/kassiendu" target="_blank" rel="noopener"><span class="chip-link__text">@kassiendu</span><span class="chip-link__icon">↗</span></a>
+          </div>
+          <div class="contact-item">
+            <div class="project-year"><span>LinkedIn</span></div>
+            <a class="chip-link" href="https://www.linkedin.com/in/dauren-kassen-a1563a154" target="_blank" rel="noopener"><span class="chip-link__text">dauren-kassen</span><span class="chip-link__icon">↗</span></a>
+          </div>
+          <div class="contact-item">
+            <div class="project-year"><span>Phone</span></div>
+            <a class="chip-link" href="tel:+77783897684"><span class="chip-link__text">+7 778 389 7684</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div>
+          <p>
+            <span id="clock" class="clock">
+              <span data-h>00</span><span class="clock-colon">:</span><span data-m>00</span><span class="clock-colon">:</span><span data-s>00</span>
+              <span data-ampm>AM</span> · Almaty
+            </span>
+          </p>
+        </div>
+      </footer>
+
+    </div><!-- /.homepage -->
+
+    <!-- CREATIVE VIEW (shown only when toggled) -->
+    <div class="creative-only" aria-hidden="true">
+
+      <header class="ch-hero">
+        <h1 class="ch-name" translate="no" aria-label="Dauren Kassen">
+          <span class="rv-char" style="--i:0">D</span><span class="rv-char" style="--i:1">a</span><span class="rv-char" style="--i:2">u</span><span class="rv-char" style="--i:3">r</span><span class="rv-char" style="--i:4">e</span><span class="rv-char" style="--i:5">n</span><span class="rv-char ch-space" style="--i:6">&nbsp;</span><span class="rv-char" style="--i:7">K</span><span class="rv-char" style="--i:8">a</span><span class="rv-char" style="--i:9">s</span><span class="rv-char" style="--i:10">s</span><span class="rv-char" style="--i:11">e</span><span class="rv-char" style="--i:12">n</span>
+        </h1>
+        <p class="ch-tag">Senior Android Developer</p>
+        <p class="ch-blurb">I architect it, build it, and ship it. <em>Kotlin</em>, <em>Compose Multiplatform</em> &amp; <em>KMM</em>, Android (Java &amp; Kotlin), <em>PWA</em> (Any JS) and <em>AI</em>.</p>
+
+        <div class="ch-stats">
+          <div><b>8+</b><span>years</span></div>
+          <div><b>7</b><span>companies</span></div>
+          <div><b>6</b><span>devs led</span></div>
+        </div>
+      </header>
+
+      <div class="ch-block">
+        <p class="ch-label">Me, on social</p>
+        <div class="post-grid">
+          <a class="post-card post-card--media" href="https://www.linkedin.com/posts/nullptr-party_nullptrtalks2-%D1%82%D0%B5%D0%BF%D0%B5%D1%80%D1%8C-%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE-%D0%BF%D0%B5%D1%80%D0%B5%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B5%D1%82%D1%8C-activity-7464315066771955712-H28d" target="_blank" rel="noopener">
+            <span class="post-card__media"><img src="assets/speaking_cmp.png" alt="Speaking about CMP at nullptr" loading="lazy"></span>
+            <span class="post-card__top">
+              <span class="post-card__badge post-card__badge--li">in</span>
+              <span class="post-card__meta">LinkedIn · nullptr.party</span>
+              <span class="post-card__arrow" aria-hidden="true">↗</span>
+            </span>
+            <span class="post-card__title">Speaker in nullptr</span>
+            <span class="post-card__desc">Talk: CMP — a project that generates income.</span>
+          </a>
+          <a class="post-card post-card--media" href="https://www.instagram.com/p/DZzCkdoDQ9d/" target="_blank" rel="noopener">
+            <span class="post-card__media"><img src="assets/insta_post.png" alt="TechMedia about me" loading="lazy"></span>
+            <span class="post-card__top">
+              <span class="post-card__badge post-card__badge--ig">◎</span>
+              <span class="post-card__meta">Instagram</span>
+              <span class="post-card__arrow" aria-hidden="true">↗</span>
+            </span>
+            <span class="post-card__title">TechMedia about me</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="ch-block">
+        <p class="ch-label">Launched by me</p>
+        <div class="post-grid">
+          <a class="post-card" href="https://dentra.me/" target="_blank" rel="noopener">
+            <span class="post-card__top">
+              <span class="post-card__badge post-card__badge--proj">↗</span>
+              <span class="post-card__meta">dentra.me</span>
+              <span class="post-card__arrow" aria-hidden="true">↗</span>
+            </span>
+            <span class="post-card__title">Dentra</span>
+            <span class="post-card__desc">Cloud practice-management software for dental &amp; medical clinics.</span>
+          </a>
+          <a class="post-card" href="https://aquacrm.app/ru" target="_blank" rel="noopener">
+            <span class="post-card__top">
+              <span class="post-card__badge post-card__badge--proj">↗</span>
+              <span class="post-card__meta">aquacrm.app</span>
+              <span class="post-card__arrow" aria-hidden="true">↗</span>
+            </span>
+            <span class="post-card__title">AquaCRM</span>
+            <span class="post-card__desc">CRM platform for managing clients, orders and deliveries.</span>
+          </a>
+        </div>
+      </div>
+
+      <p class="ch-label ch-label--folders">Experience</p>
+      <div class="folders">
+        <a class="folder" style="--i:0" href="#" onclick="return false">
+          <span class="folder__logo"><b>QIC</b><img src="assets/qic.png" alt="QIC" onerror="this.style.display='none'"></span>
+          <span class="folder__year">2025 — now</span>
+          <span class="folder__title">QIC super-app</span>
+          <span class="folder__role">Senior Android Developer · Health</span>
+          <span class="folder__desc">Building the health vertical — online-first health telemetry on Kotlin &amp; Jetpack Compose.</span>
+          <span class="folder__chips"><i>Kotlin</i><i>Compose</i><i>Health</i></span>
+        </a>
+        <a class="folder" style="--i:1" href="https://globerce.capital/" target="_blank" rel="noopener">
+          <span class="folder__logo"><b>GC</b><img src="assets/globerce.png" alt="Globerce" onerror="this.style.display='none'"></span>
+          <span class="folder__year">2024</span>
+          <span class="folder__title">Globerce Capital Ltd</span>
+          <span class="folder__role">Lead Android Developer</span>
+          <span class="folder__desc">Compose Multiplatform / KMM, multi-module Gradle, led a 6-dev team, and shipped KZ's first in-app AI banking assistant.</span>
+          <span class="folder__chips"><i>Kotlin</i><i>KMM</i><i>CMP</i><i>Ktor</i></span>
+        </a>
+        <a class="folder" style="--i:2" href="#" onclick="return false">
+          <span class="folder__logo"><b>DA</b><img src="assets/orta.png" alt="Digital Automation Solutions" onerror="this.style.display='none'"></span>
+          <span class="folder__year">2020—24</span>
+          <span class="folder__title">Digital Automation Solutions KZ</span>
+          <span class="folder__role">Lead Android Developer</span>
+          <span class="folder__desc">Clean Architecture + MVI, Wi-Fi Direct offline transfer, Bluetooth pairing, Java→Kotlin and REST→GraphQL.</span>
+          <span class="folder__chips"><i>MVI</i><i>Coroutines</i><i>GraphQL</i><i>Room</i></span>
+        </a>
+        <a class="folder" style="--i:3" href="https://eventyr.pro/" target="_blank" rel="noopener">
+          <span class="folder__logo"><b>EV</b></span>
+          <span class="folder__year">2022—23</span>
+          <span class="folder__title">Eventyr · remote (AU/US)</span>
+          <span class="folder__role">Mobile App Developer</span>
+          <span class="folder__desc">Key screens fully in Jetpack Compose; Jenkins CI that doubled build speed.</span>
+          <span class="folder__chips"><i>Compose</i><i>Jenkins</i><i>Ktor</i></span>
+        </a>
+        <a class="folder" style="--i:4" href="https://chocofamily.kz/" target="_blank" rel="noopener">
+          <span class="folder__logo"><b>CF</b><img src="assets/choco.png" alt="Chocofamily" onerror="this.style.display='none'"></span>
+          <span class="folder__year">2020—22</span>
+          <span class="folder__title">Chocofamily Holding</span>
+          <span class="folder__role">Android Developer</span>
+          <span class="folder__desc">100% Kotlin production app, A/B testing, modular refactor, Coroutines + Flow.</span>
+          <span class="folder__chips"><i>Kotlin</i><i>Flow</i><i>Fastlane</i></span>
+        </a>
+        <a class="folder" style="--i:5" href="#" onclick="return false">
+          <span class="folder__logo"><b>CB</b></span>
+          <span class="folder__year">2018—20</span>
+          <span class="folder__title">Citrobyte</span>
+          <span class="folder__role">Junior Android Developer</span>
+          <span class="folder__desc">Retail &amp; finance apps, Java→Kotlin migration, loyalty &amp; payments, RecyclerView perf.</span>
+          <span class="folder__chips"><i>Java</i><i>RxJava</i><i>MVP</i></span>
+        </a>
+        <a class="folder folder--cta" style="--i:6" href="mailto:kas.dauren@gmail.com">
+          <span class="folder__year">Say hi</span>
+          <span class="folder__title">Let's build something</span>
+          <span class="folder__role">kas.dauren@gmail.com</span>
+          <span class="folder__desc">Open to senior / lead Android &amp; Compose Multiplatform roles. Happy remote.</span>
+          <span class="folder__chips"><i>Telegram @kassiendu</i><i>LinkedIn</i></span>
+        </a>
+      </div>
+
+      <footer class="creative-footer">
+        <span id="clock2" class="clock">
+          <span data-h>00</span><span class="clock-colon">:</span><span data-m>00</span><span class="clock-colon">:</span><span data-s>00</span>
+          <span data-ampm>AM</span> · Almaty
+        </span>
+      </footer>
+
+    </div><!-- /.creative-only -->
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

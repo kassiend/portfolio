@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Personal document (not part of the site)
+Resume (CV).pdf
+
+# Editor / tooling
+.claude/
