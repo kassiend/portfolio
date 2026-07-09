@@ -104,46 +104,44 @@ ul { list-style: none; }
   transition: max-width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* ---------- FLAPPY BIRD (flies across the top) ---------- */
+/* ---------- PIXEL BIRD (flies across, JS-driven vertical drift) ---------- */
 .sky-bird {
-  position: fixed; top: 44px; left: 0; z-index: 40;
-  width: 46px; height: 34px; pointer-events: none; will-change: transform;
-  animation: birdFlyAcross 11s linear infinite;
+  position: fixed; top: 0; left: 0; z-index: 40;
+  width: 44px; height: 33px; pointer-events: none; will-change: transform;
+  transform: translate(-80px, 60px);
 }
-/* vertical bob + tilt: quick flap up (nose up), slow fall (nose down) */
-.sky-bird__inner {
-  will-change: transform;
-  animation: flappyBob 0.85s cubic-bezier(0.3, 0, 0.5, 1) infinite;
-}
-@keyframes flappyBob {
-  0%   { transform: translateY(2px)   rotate(20deg); }
-  16%  { transform: translateY(-16px) rotate(-20deg); }
-  100% { transform: translateY(2px)   rotate(20deg); }
-}
-/* wing flap */
-.bird-wing {
-  transform-box: view-box; transform-origin: 13px 17px;
-  animation: flappyWing 0.17s ease-in-out infinite alternate;
-}
-@keyframes flappyWing {
-  from { transform: rotate(-16deg); }
-  to   { transform: rotate(26deg); }
-}
-/* horizontal traverse only (bob handled by inner) */
-@keyframes birdFlyAcross {
-  0%   { transform: translateX(-70px); }
-  100% { transform: translateX(calc(100vw + 70px)); }
-}
+.bird-svg { image-rendering: pixelated; }
+/* two-frame pixel wing flap */
+.px-wing { animation-duration: 0.24s; animation-timing-function: steps(1); animation-iteration-count: infinite; }
+.px-wing--up   { animation-name: pxWingUp; }
+.px-wing--down { animation-name: pxWingDown; }
+@keyframes pxWingUp   { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@keyframes pxWingDown { 0%, 49% { opacity: 0; } 50%, 100% { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .sky-bird { display: none; } }
 
-/* ---------- MODE TOGGLE ---------- */
+/* ---------- TOP BAR (mode toggle + download CV) ---------- */
+.top-bar {
+  position: absolute; top: 24px; left: 16px; right: 16px; z-index: 30;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+}
 .mode-toggle {
-  position: absolute; top: 24px; left: 16px; z-index: 30;
   display: inline-flex; align-items: center;
   padding: 2.5px; border-radius: 999px;
   background: #f1f1f3; box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.06);
   width: fit-content;
 }
+.cv-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-primary); font-size: 11.5px; font-weight: 600;
+  color: var(--grey1); text-decoration: none;
+  padding: 6px 13px; border-radius: 999px;
+  background: #f1f1f3; box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.16s cubic-bezier(0.34, 1.1, 0.64, 1);
+}
+.cv-btn svg { color: var(--grey3); transition: color 0.2s ease, transform 0.2s cubic-bezier(0.25, 1, 0.5, 1); }
+.cv-btn:hover { background: #e9e9ec; }
+.cv-btn:hover svg { color: var(--grey1); transform: translateY(1px); }
+.cv-btn:active { transform: scale(0.97); }
 .mode-btn {
   position: relative; z-index: 1; border: none; background: none; cursor: pointer;
   font-family: var(--font-primary); font-size: 11.5px; font-weight: 600;
