@@ -104,33 +104,30 @@ ul { list-style: none; }
   transition: max-width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* ---------- PIXEL BIRD (flies across, JS-driven vertical drift) ---------- */
+/* ---------- EAGLE (flies straight across the top) ---------- */
 .sky-bird {
-  position: fixed; top: 0; left: 0; z-index: 40;
-  width: 44px; height: 33px; pointer-events: none; will-change: transform;
-  transform: translate(-80px, 60px);
+  position: fixed; top: 34px; left: 0; z-index: 40;
+  pointer-events: none; will-change: transform;
+  animation: eagleFly 12s linear infinite;
 }
-.bird-svg { image-rendering: pixelated; }
-/* two-frame pixel wing flap */
-.px-wing { animation-duration: 0.24s; animation-timing-function: steps(1); animation-iteration-count: infinite; }
-.px-wing--up   { animation-name: pxWingUp; }
-.px-wing--down { animation-name: pxWingDown; }
-@keyframes pxWingUp   { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
-@keyframes pxWingDown { 0%, 49% { opacity: 0; } 50%, 100% { opacity: 1; } }
+.sky-bird img { width: 46px; height: auto; display: block; }
+@keyframes eagleFly {
+  0%   { transform: translateX(-120px); }
+  100% { transform: translateX(calc(100vw + 120px)); }
+}
 @media (prefers-reduced-motion: reduce) { .sky-bird { display: none; } }
 
-/* ---------- TOP BAR (mode toggle + download CV) ---------- */
-.top-bar {
-  position: absolute; top: 24px; left: 16px; right: 16px; z-index: 30;
-  display: flex; align-items: center; justify-content: space-between; gap: 10px;
-}
+/* ---------- MODE TOGGLE (segment control) ---------- */
 .mode-toggle {
+  position: absolute; top: 24px; left: 16px; z-index: 30;
   display: inline-flex; align-items: center;
   padding: 2.5px; border-radius: 999px;
   background: #f1f1f3; box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.06);
   width: fit-content;
 }
+/* ---------- DOWNLOAD CV (separate button, top-right) ---------- */
 .cv-btn {
+  position: absolute; top: 25px; right: 16px; z-index: 30;
   display: inline-flex; align-items: center; gap: 6px;
   font-family: var(--font-primary); font-size: 11.5px; font-weight: 600;
   color: var(--grey1); text-decoration: none;

@@ -6,50 +6,7 @@
   "use strict";
 
   /* Native scrolling only — no smooth-scroll inertia (kept effortless). */
-
-  /* ---- Pixel bird: fly across with random vertical drift ---- */
-  const bird = document.querySelector(".sky-bird");
-  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (bird && !reduced) {
-    const rand = (a, b) => a + Math.random() * (b - a);
-    let x, baseY, ampA, ampB, freqA, freqB, phaseA, phaseB, speed, tilt0, t, flying;
-
-    const spawn = () => {
-      x = -80;
-      baseY = rand(24, 150);          // random height band near the top
-      ampA = rand(10, 26);            // vertical wander amplitude
-      ampB = rand(4, 12);
-      freqA = rand(0.5, 1.1);
-      freqB = rand(1.4, 2.4);
-      phaseA = rand(0, Math.PI * 2);
-      phaseB = rand(0, Math.PI * 2);
-      speed = rand(55, 95);           // px per second
-      t = 0;
-      flying = true;
-    };
-    spawn();
-
-    let last = performance.now();
-    const frame = (now) => {
-      const dt = Math.min(0.05, (now - last) / 1000);
-      last = now;
-      if (flying) {
-        t += dt;
-        x += speed * dt;
-        const y = baseY + Math.sin(t * freqA + phaseA) * ampA + Math.sin(t * freqB + phaseB) * ampB;
-        // tilt follows vertical velocity so it noses up/down naturally
-        const vy = Math.cos(t * freqA + phaseA) * ampA * freqA + Math.cos(t * freqB + phaseB) * ampB * freqB;
-        const tilt = Math.max(-22, Math.min(22, vy * 1.6));
-        bird.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) rotate(${tilt.toFixed(1)}deg)`;
-        if (x > window.innerWidth + 90) {
-          flying = false;
-          setTimeout(spawn, rand(1200, 4200)); // pause, then a fresh random flight
-        }
-      }
-      requestAnimationFrame(frame);
-    };
-    requestAnimationFrame(frame);
-  }
+  /* Eagle flies via pure CSS (see .sky-bird animation) — no JS needed. */
 
   /* ---- Minimal / Creative mode toggle ---- */
   const btns = document.querySelectorAll(".mode-btn");

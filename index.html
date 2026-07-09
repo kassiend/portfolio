@@ -13,65 +13,25 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Pixel bird flying across, with random vertical drift (position driven by JS) -->
+  <!-- Eagle flying straight across the top -->
   <div class="sky-bird" aria-hidden="true">
-    <svg class="bird-svg" viewBox="0 0 12 9" width="44" height="33" shape-rendering="crispEdges">
-      <!-- body -->
-      <g fill="#3a2e22">
-        <rect x="2" y="0" width="4" height="1"/>
-        <rect x="1" y="1" width="1" height="1"/><rect x="6" y="1" width="3" height="1"/>
-        <rect x="0" y="2" width="1" height="1"/><rect x="9" y="2" width="1" height="1"/>
-        <rect x="0" y="3" width="1" height="1"/><rect x="9" y="3" width="1" height="1"/>
-        <rect x="0" y="4" width="1" height="1"/><rect x="8" y="4" width="2" height="1"/>
-        <rect x="0" y="5" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/>
-        <rect x="1" y="6" width="1" height="1"/><rect x="7" y="6" width="1" height="1"/>
-        <rect x="2" y="7" width="5" height="1"/>
-      </g>
-      <g fill="#ffd21f">
-        <rect x="2" y="1" width="4" height="1"/>
-        <rect x="1" y="2" width="6" height="1"/>
-        <rect x="1" y="3" width="6" height="1"/>
-        <rect x="1" y="4" width="7" height="1"/>
-        <rect x="7" y="5" width="1" height="1"/>
-      </g>
-      <g fill="#fff2c4"><!-- belly -->
-        <rect x="1" y="5" width="6" height="1"/>
-        <rect x="2" y="6" width="5" height="1"/>
-      </g>
-      <rect x="7" y="2" width="1" height="1" fill="#ffffff"/><!-- eye -->
-      <rect x="8" y="2" width="1" height="1" fill="#222222"/>
-      <rect x="7" y="3" width="2" height="1" fill="#ffffff"/>
-      <g fill="#f4841e"><!-- beak -->
-        <rect x="10" y="2" width="2" height="1"/>
-        <rect x="10" y="3" width="2" height="1"/>
-        <rect x="10" y="4" width="1" height="1"/>
-      </g>
-      <!-- flapping wing: two frames toggled -->
-      <g class="px-wing px-wing--up">
-        <rect x="2" y="1" width="3" height="1" fill="#e6b800"/>
-        <rect x="2" y="2" width="3" height="1" fill="#ffffff"/>
-      </g>
-      <g class="px-wing px-wing--down">
-        <rect x="2" y="4" width="3" height="1" fill="#e6b800"/>
-        <rect x="2" y="5" width="3" height="1" fill="#ffffff"/>
-      </g>
-    </svg>
+    <img src="assets/eagle.gif" alt="" />
   </div>
 
   <div class="page-shell">
 
-    <!-- Top bar: mode toggle + download CV -->
-    <div class="top-bar">
-      <div class="mode-toggle" role="group" aria-label="View mode">
-        <span class="mode-thumb" aria-hidden="true"></span>
-        <button class="mode-btn is-active" data-mode="minimal" type="button" aria-pressed="true">Minimal</button>
-        <button class="mode-btn" data-mode="creative" type="button" aria-pressed="false">Creative</button>
-      </div>
-      <a class="cv-btn" href="https://docs.google.com/document/d/1savlyQYQKX3NNCFuW321WbPhFWoQEuqb4LwaLZgFYKc/export?format=pdf" target="_blank" rel="noopener">
-        <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M8 2v8m0 0L5 7m3 3l3-3M3 13h10"/></svg>
-        Download CV
-      </a>
+    <!-- Mode toggle -->
+    <div class="mode-toggle" role="group" aria-label="View mode">
+      <span class="mode-thumb" aria-hidden="true"></span>
+      <button class="mode-btn is-active" data-mode="minimal" type="button" aria-pressed="true">Minimal</button>
+      <button class="mode-btn" data-mode="creative" type="button" aria-pressed="false">Creative</button>
     </div>
+
+    <!-- Download CV — separate button, top-right -->
+    <a class="cv-btn" href="https://docs.google.com/document/d/1savlyQYQKX3NNCFuW321WbPhFWoQEuqb4LwaLZgFYKc/export?format=pdf" target="_blank" rel="noopener">
+      <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M8 2v8m0 0L5 7m3 3l3-3M3 13h10"/></svg>
+      Download CV
+    </a>
 
     <div class="homepage">
 
